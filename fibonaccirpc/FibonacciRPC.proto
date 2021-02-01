@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option go_package = "github.com/TawR1024/FibonacciRPC/fibonaccirpc";
+
+package fibonaccirpc;
+
+service Fibonacci {
+  rpc CalculateFibonacci(Request) returns (Reply) {};
+
+}
+
+message Request {
+  int64 position = 1;
+}
+
+message Reply {
+  string fnumber = 1;
+}
